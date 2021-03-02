@@ -1,0 +1,40 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+.body__container {
+  padding: 50px;
+  border: 10px solid rgb(168, 186, 236);
+}
+.login {
+  border: 3px dashed black;
+  padding: 20px 20px;
+  background-color: beige;
+}
+.login__border {
+  border: 1px solid grey;
+  padding: 10px;
+}
+.login__title h5 {
+  margin: 0px;
+  padding-top: 0px;
+}
+.login__form label {
+  background-color: lightgrey;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.login button {
+  background-color: yellow;
+  border: 1px blaCK solid;
+}
+.red {
+  background-color: red;
+}
+.hidden {
+  visibility: hidden;
+}
+.output__display {
+  display: flex;
+  align-items: center;
+}

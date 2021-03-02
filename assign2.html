@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 2</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jasmine/lib/md5.js"></script>
+</head>
+<body>
+    <div class="body__container">
+        <div class="body__title">
+            <h1>LOG IN PAGE</h1>
+        </div>
+        <div class="login">
+            <div class="login__container">
+                <div class="login__title">
+                    <h5>User Authentication</h5>
+                </div>
+            <div class="login__border">
+                <form class="login__form" name="login" id="form" action="#">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username"><br>
+                    <label for="password"> Password</label>
+                    <input type="password" id="password" name="password"><br>
+                    <button type="submit">Log in</button>
+                </form>
+            </div>
+            </div>
+        </div>
+        <div id="output">
+            <div class="output__display">
+                <h4>Username:</h4><span id="output__name"></span>
+            </div>
+            <div class="output__display">
+                <h4>Password:</h4><span id="output__password"></span>
+            </div>
+           
+        </div>
+    </div>
+    
+<script src="assign2.js"></script>
+</body>
+</html>
