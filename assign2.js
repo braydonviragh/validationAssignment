@@ -21,28 +21,21 @@
      */
 function checkLogIn(username, password){ 
     "use strict";
-    var hPassword = md5Encrypt(password); //Hashing the password 
-    //Both username and password dont match
-    if(username !== "Braydon" && hPassword !== "5f4dcc3b5aa765d61d8327deb882cf99" ){
-        var invalidError = "Invalid Username or Password";
-        return invalidError;
-    } else if (hPassword !== "5f4dcc3b5aa765d61d8327deb882cf99" ) { //if password doesnt match
-        var invalidError = "Invalid Username or Password";
-        return invalidError;
-    }else if(hPassword === " " || hPassword === null){//empty / null password
-        var passwordEmpty = "No password entered";
-        return passwordEmpty;
-    } else if(username !== "Braydon"){ //invalid username
-        var invalidError = "Invalid Username or Password";
-        return invalidError;
-    }  else if(username === " " || username === null) {  // empty username
-        var usernameEmpty = "No username entered";
-        return usernameEmpty;
+    
+    if(username === "" || username === null) { 
+        return "No username entered"
+    } 
+    if(password === " " || password === null) { 
+        return "No password entered"
     }
-    else
-     { 
-        return true;
-    }   
+    
+    if((md5Encrypt(password) !== "5f4dcc3b5aa765d61d8327deb882cf99" && username !== "Braydon")| (md5Encrypt(password) === "5f4dcc3b5aa765d61d8327deb882cf99" && username !== "Braydon")) { 
+        return "Invalid Username or Password.";
+    }
+    else { 
+        return "Welcome Back!";
+    }
+    
 }
  //END checkLogIn
 
@@ -60,13 +53,10 @@ window.onload = function loadScript() {
     function submitForm() {
     //check if hashed password matches
     checkLogIn(username.value, password.value);
-    
+    var message = checkLogIn(username.value, password.value);
+    output.innerHTML = message;
 
-    //Commence validation
-    //Need if statments to show results depending on function return.
-    /*example: if(checkLogIn === true){ 
-        output = "Welcome back!"
-    }*/
+    return false;
 }
    
 
